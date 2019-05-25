@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encurte Urls!!!</title>
+</head>
+<body>
+<h1>Encurte uma url</h1>
+<form action="/gerar" method="post">
+    Url: <input type="text" name="url"><br>
+    <input type="submit" value="gerar">
+</form>
+
+
+
+
+<h1>L I N K S</h1>
+<table border="1">
+        <tr>
+            <td>Urls</td>
+            <td>Acessos</td>
+        </tr>
+{% for link in links %}
+            <tr>
+                <td><a href="{{link[0]}}">{{link[1]}}</td>
+                <td>{{link[2]}}</td>
+            </tr>
+        {% endfor %}
+</body>
+</html>
